@@ -1,0 +1,32 @@
+name: Release packages
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.zip.b64"
+      - "suite.json"
+      - ".github/workflows/release-packages.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode zips
+        run: |
+          mkdir -p dist
+          shopt -s nullglob
+          for f in *.zip.b64; do
+            base64 -d "$f" > "dist/${f%.b64}"
+            echo "decoded $f -> dist/${f%.b64} ($(wc -c < "dist/${f%.b64}") bytes)"
+          done
+          cp -f suite.json dist/suite.json
+          ls -la dist
+      - name: Tag and release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v$(date -u +%Y%m%d-%H%M%S)"
+          gh release create "$TAG" dist/* --title "$TAG" --notes "S&P Suite packages. Point WordPress at the raw suite.json on main, or download zips from this release."
