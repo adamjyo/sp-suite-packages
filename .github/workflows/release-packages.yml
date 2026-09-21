@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "*.zip.b64"
+      - "*.zip.b64.*"
       - "suite.json"
       - ".github/workflows/release-packages.yml"
   workflow_dispatch:
@@ -22,6 +23,11 @@ jobs:
             base64 -d "$f" > "dist/${f%.b64}"
             echo "decoded $f -> dist/${f%.b64} ($(wc -c < "dist/${f%.b64}") bytes)"
           done
+          prefixes=$(ls *.zip.b64.* 2>/dev/null | sed 's/\.zip\.b64\.[0-9]*$//' | sort -u)
+          for prefix in $prefixes; do
+            cat ${prefix}.zip.b64.* | tr -d '\n' | base64 -d > "dist/${prefix}.zip"
+            echo "joined ${prefix} $(wc -c < dist/${prefix}.zip) bytes"
+          done
           cp -f suite.json dist/suite.json
           ls -la dist
       - name: Tag and release
@@ -29,4 +35,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="v$(date -u +%Y%m%d-%H%M%S)"
-          gh release create "$TAG" dist/* --title "$TAG" --notes "S&P Suite packages. Point WordPress at the raw suite.json on main, or download zips from this release."
+          gh release create "$TAG" dist/* --title "$TAG" --notes "S&P Suite packages for WordPress. Use https://raw.githubusercontent.com/adamjyo/sp-suite-packages/main/suite.json as the Suite source."
