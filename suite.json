@@ -1,0 +1,61 @@
+{
+  "name": "S&P Suite",
+  "updated": "2026-09-21",
+  "source": "https://raw.githubusercontent.com/adamjyo/sp-suite-packages/main/",
+  "plugins": [
+    {
+      "id": "catalog",
+      "name": "S&P Catalog",
+      "file": "songwriting-publishing-database/songwriting-catalog.php",
+      "zip": "SP-Catalog.zip",
+      "url": "https://github.com/adamjyo/sp-suite-packages/raw/main/SP-Catalog.zip",
+      "version": "1.2.68",
+      "required": true,
+      "description": "Works editor, people, society reports, royalties, and payouts. Private SQLite catalog on your host. Required. Install this first."
+    },
+    {
+      "id": "app",
+      "name": "S&P App",
+      "file": "public-catalog-interface/public-catalog-interface.php",
+      "zip": "SP-App.zip",
+      "url": "https://github.com/adamjyo/sp-suite-packages/raw/main/SP-App.zip",
+      "version": "1.1.2",
+      "required": false,
+      "depends": ["catalog"],
+      "description": "Public /app/ catalog for phones and share links. Login from the header. Has its own designer. Needs Catalog."
+    },
+    {
+      "id": "sessions",
+      "name": "S&P Sessions",
+      "file": "songwriting-sessions/songwriting-sessions.php",
+      "zip": "SP-Sessions.zip",
+      "url": "https://github.com/adamjyo/sp-suite-packages/raw/main/SP-Sessions.zip",
+      "version": "1.3.9",
+      "required": false,
+      "depends": ["catalog"],
+      "description": "Writing sessions: record, invite, trim audio, turn a take into a catalog work. Needs Catalog."
+    },
+    {
+      "id": "art",
+      "name": "S&P Album Art Studio",
+      "file": "songwriting-art-studio/songwriting-art-studio.php",
+      "zip": "SP-Album-Art-Studio.zip",
+      "url": "https://github.com/adamjyo/sp-suite-packages/raw/main/SP-Album-Art-Studio.zip",
+      "version": "1.0.1",
+      "required": false,
+      "depends": ["catalog"],
+      "description": "Generate and sleeve album art for a serial. Optional. Uses the xAI key in Catalog if you have one."
+    },
+    {
+      "id": "accounting",
+      "name": "S&P Accounting",
+      "file": "royalty-statements/royalty-statements.php",
+      "zip": "SP-Accounting.zip",
+      "url": "https://github.com/adamjyo/sp-suite-packages/raw/main/SP-Accounting.zip",
+      "version": "1.0.2",
+      "required": false,
+      "depends": ["catalog"],
+      "description": "Email a quarterly PDF statement from Royalties per person. Optional. Uses your host mail."
+    }
+  ]
+}
