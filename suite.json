@@ -1,6 +1,6 @@
 {
   "name": "S&P Suite",
-  "updated": "2026-09-21",
+  "updated": "2026-10-30",
   "source": "https://raw.githubusercontent.com/adamjyo/sp-suite-packages/main/",
   "plugins": [
     {
@@ -9,9 +9,9 @@
       "file": "songwriting-publishing-database/songwriting-catalog.php",
       "zip": "SP-Catalog.zip",
       "url": "https://github.com/adamjyo/sp-suite-packages/releases/latest/download/SP-Catalog.zip",
-      "version": "1.2.68",
+      "version": "1.1.38",
       "required": true,
-      "description": "Works editor, people, society reports, royalties, and payouts. Private SQLite catalog on your host. Required. Install this first."
+      "description": "Works, people, societies, royalties, payouts, public app, sessions, album art, and accounting. One zip."
     },
     {
       "id": "app",
