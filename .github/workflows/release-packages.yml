@@ -30,6 +30,16 @@ jobs:
           done
           cp -f suite.json dist/suite.json
           ls -la dist
+      - name: Keep catalog zips from the previous release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for name in SP-Catalog.zip SP-Catalog-Clean-Install.zip; do
+            if [ ! -s "dist/$name" ]; then
+              gh release download --pattern "$name" --dir dist || true
+            fi
+          done
+          ls -la dist
       - name: Tag and release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
