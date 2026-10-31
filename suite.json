@@ -9,7 +9,7 @@
       "file": "songwriting-publishing-database/songwriting-catalog.php",
       "zip": "SP-Catalog.zip",
       "url": "https://github.com/adamjyo/sp-suite-packages/releases/latest/download/SP-Catalog.zip",
-      "version": "1.1.80",
+      "version": "1.1.81",
       "required": true,
       "description": "Works, people, societies, royalties, payouts, public app, sessions, album art, and accounting. One zip."
     },
