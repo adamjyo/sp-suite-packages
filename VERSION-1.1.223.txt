@@ -1,0 +1,3 @@
+SP-Catalog 1.1.223
+projects panel always visible
+md5 53d113c0fb87194cdb4cb6b7406cee8d
