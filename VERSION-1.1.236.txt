@@ -1,0 +1,3 @@
+SP-Catalog 1.1.236
+Notes: ChordPro sheet and PDF share one full-page Letter layout in the SongSelect chart style (grey title, bold chords with raised extensions, uppercase sections, one or two balanced columns, credits footer)
+md5 7af0dbe74792bc249a9438b5063b1b92
