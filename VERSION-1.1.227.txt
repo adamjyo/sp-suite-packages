@@ -1,0 +1,3 @@
+SP-Catalog 1.1.227
+Notes page: fix editor locking on click-away, key/tempo not reloading, save races; layout, tags box, author picker, map coordinates
+md5 8d9be9c37ab3fb0c3b28088ca66e1fdd
