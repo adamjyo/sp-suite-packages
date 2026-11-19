@@ -1,0 +1,3 @@
+SP-Catalog 1.1.229
+Notes: tick notes and export them as .md (one file, or a .zip of .md files); import .md files
+md5 197d491c00a3a96b25461efa1a2136c9
