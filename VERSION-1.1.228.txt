@@ -1,0 +1,3 @@
+SP-Catalog 1.1.228
+Notes: save fixed (nonce), delete, pin, archive, body search, markdown + links, export/import JSON, phone layout, save on close
+md5 3724fe01357f320caca3cd31dd2c3c4b
