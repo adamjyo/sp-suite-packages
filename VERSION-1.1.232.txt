@@ -1,0 +1,3 @@
+SP-Catalog 1.1.232
+Notes: ChordPro button adds a chord-sheet embed (edit popup, transpose, print to PDF); ChordPro stored as ```chordpro blocks in the note
+md5 f4f16245151d50660a10248a633b2b2a
