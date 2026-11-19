@@ -1,0 +1,3 @@
+SP-Catalog 1.1.231
+Left menu: hide / show button on every desktop page (remembers your choice)
+md5 d37addd325c89c153a9d50eefab03d44
