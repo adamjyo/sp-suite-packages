@@ -1,0 +1,3 @@
+SP-Catalog 1.1.230
+Notes: Cmd/Ctrl-click, Shift-click and Cmd/Ctrl+A multi-select (no checkboxes); select mode button for touch
+md5 c1d86e75dd67ed9e05a862a0bf67777e
