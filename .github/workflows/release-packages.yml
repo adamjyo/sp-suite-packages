@@ -25,17 +25,26 @@ jobs:
           done
           prefixes=$(ls *.zip.b64.* 2>/dev/null | sed 's/\.zip\.b64\.[0-9]*$//' | sort -u)
           for prefix in $prefixes; do
-            cat ${prefix}.zip.b64.* | tr -d '\n' | base64 -d > "dist/${prefix}.zip"
+            parts=$(ls ${prefix}.zip.b64.* | sort -t. -k4,4n)
+            cat $parts | tr -d '\n' | base64 -d > "dist/${prefix}.zip"
             echo "joined ${prefix} $(wc -c < dist/${prefix}.zip) bytes"
+            if ! unzip -t "dist/${prefix}.zip" >/tmp/unzip-test.txt 2>&1; then
+              echo "ERROR: dist/${prefix}.zip is not a valid zip"
+              cat /tmp/unzip-test.txt
+              rm -f "dist/${prefix}.zip"
+            else
+              echo "OK valid zip: ${prefix}"
+            fi
           done
           cp -f suite.json dist/suite.json
           ls -la dist
-      - name: Keep catalog zips from the previous release
+      - name: Keep catalog zips from the previous release only if missing
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for name in SP-Catalog.zip SP-Catalog-Clean-Install.zip; do
             if [ ! -s "dist/$name" ]; then
+              echo "WARN: $name missing after decode; trying previous release"
               gh release download --pattern "$name" --dir dist || true
             fi
           done
@@ -44,5 +53,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          if [ ! -s dist/SP-Catalog.zip ]; then
+            echo "ERROR: no valid SP-Catalog.zip to publish"
+            exit 1
+          fi
           TAG="v$(date -u +%Y%m%d-%H%M%S)"
           gh release create "$TAG" dist/* --title "$TAG" --notes "S&P Suite packages for WordPress. Use https://raw.githubusercontent.com/adamjyo/sp-suite-packages/main/suite.json as the Suite source."
