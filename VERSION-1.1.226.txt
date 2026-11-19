@@ -1,3 +1,4 @@
 SP-Catalog 1.1.226
-list art play/pause for work audio
+list art play/pause
 md5 6065a8fe1822d9f86b1d57111d055853
+package chunks updating
