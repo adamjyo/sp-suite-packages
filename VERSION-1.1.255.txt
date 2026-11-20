@@ -1,0 +1,3 @@
+SP-Catalog 1.1.255
+audit trail covers version copies, admin edit, app editor, imports
+md5 e48d6156c3daf3d31751aa6ae682ee36
