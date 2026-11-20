@@ -1,0 +1,3 @@
+SP-Catalog 1.1.265
+Works list: fills the page, shorter rows, title no longer overlaps, page counter fix; editor: pinned toolbar, softer section colors, quieter Delete record
+md5 a3c669763b566810ecef8a8a60ae50ac
