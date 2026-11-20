@@ -1,0 +1,3 @@
+SP-Catalog 1.1.239
+Notes: ProChord editor on the Works page now runs on the shared ChordPro engine (assets/chordpro.js): full-page Letter preview, key-aware transpose, convert chords over words, heading template, PDF download
+md5 978dfb2deefb638893d69d6329721aa9
