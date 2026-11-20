@@ -1,0 +1,3 @@
+SP-Catalog 1.1.266
+Album art designer: output size choice, safe-area guide, small-size previews, Add title and band, confirm before applying art, keyboard shortcuts, spell check on text
+md5 24e836f59d3ed7bbaf02a50993dadcb9
