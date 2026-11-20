@@ -1,0 +1,3 @@
+SP-Catalog 1.1.251
+notes map in right panel, gps stamp
+md5 7d833ec7f2e4d51cbdf2ee4e000ab797
