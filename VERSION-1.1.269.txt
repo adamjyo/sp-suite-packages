@@ -1,0 +1,3 @@
+SP-Catalog 1.1.269
+Works editor: fix double underline on all dropdowns (search box inside dropdown)
+md5 e406f5ee864739d4bc47f09b1dc33a6f
