@@ -1,0 +1,3 @@
+SP-Catalog 1.1.268
+Works editor: attempt to remove double underline on empty name boxes
+md5 25fac290d294f10acd9c36524fc72944
