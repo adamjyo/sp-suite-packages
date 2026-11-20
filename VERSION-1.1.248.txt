@@ -1,0 +1,3 @@
+SP-Catalog 1.1.248
+word highlight in version compare
+md5 3cba1d65f2525fc4e6ffea6d0db332e0
