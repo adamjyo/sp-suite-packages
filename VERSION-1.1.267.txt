@@ -1,0 +1,3 @@
+SP-Catalog 1.1.267
+Work sheet: cover art, links, compact registrations, side-by-side writers and publishing, one-page print, splits check, signature lines, copy splits, registration toggle
+md5 cd70434a919afe5a606967e14ec90f23
