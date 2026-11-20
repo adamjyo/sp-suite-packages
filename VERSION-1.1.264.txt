@@ -1,0 +1,3 @@
+SP-Catalog 1.1.264
+page walkthrough polish (login, notes on phones, signing and agreement pages, branded emails, Health, Brand settings, app list)
+md5 bd4c107efad28ac2b89977d8efde30e4
