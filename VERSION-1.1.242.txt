@@ -1,0 +1,3 @@
+SP-Catalog 1.1.242
+limit failed catalog logins
+md5 2aaedd22d36b33c9653602f42d1fcca5
