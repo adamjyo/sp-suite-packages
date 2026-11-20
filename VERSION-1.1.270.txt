@@ -1,0 +1,3 @@
+SP-Catalog 1.1.270
+Backup reminder, registration reminders, split templates, duplicate finder, import messages, monthly card, private work sheet links
+md5 2c460bd6d106c353a03a1226572926d3
