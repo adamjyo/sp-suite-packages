@@ -1,0 +1,3 @@
+SP-Catalog 1.1.271
+Fixes: Stats panel, faster editor open, no CCLI reminders, clearer duplicate tags, two notices
+md5 58760d6a21d3c61ada65bfb7d1647e1a
