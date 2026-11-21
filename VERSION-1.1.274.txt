@@ -1,0 +1,3 @@
+SP-Catalog 1.1.274
+Refined dark look on Notes and the Work editor fields
+md5 7b471460dce32adf763fef7e754e8986
