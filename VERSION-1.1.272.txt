@@ -1,0 +1,3 @@
+SP-Catalog 1.1.272
+Refined dark look: menu icons, cleaner Works table, long text no longer runs into the next column
+md5 881beeebd90b7e2190c56087992da4a3
